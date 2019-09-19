@@ -6,7 +6,7 @@ function displayWeather () {
         function(data){
             console.log(data);
 
-            let icon = `http://api.openweathermap.org/img/w/${data.weather[0].icon}.png`;
+            let icon = `https://api.openweathermap.org/img/w/${data.weather[0].icon}.png`;
             $(".icon").attr("src", icon);
             $(".city").html(data.name);
             $(".description").html(data.weather[0].description);
