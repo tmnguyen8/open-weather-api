@@ -2,7 +2,7 @@ var inputCity = "";
 var weatherAPI = "";
 
 function displayWeather () {
-    $.getJSON(`http://api.openweathermap.org/data/2.5/weather?q=${inputCity},us&units=imperial&appid=a14b5cd39920b60f089d913e4253e5f5`, 
+    $.getJSON(`https://api.openweathermap.org/data/2.5/weather?q=${inputCity},us&units=imperial&appid=a14b5cd39920b60f089d913e4253e5f5`, 
         function(data){
             console.log(data);
 
@@ -17,7 +17,7 @@ function displayWeather () {
 // when submit button is pressed
 $("#submit").click(function() {
     inputCity = $("#cityInput").val();
-    weatherAPI = `http://api.openweathermap.org/data/2.5/weather?q=${inputCity},us&units=imperial&appid=a14b5cd39920b60f089d913e4253e5f5`;
+    weatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity},us&units=imperial&appid=a14b5cd39920b60f089d913e4253e5f5`;
     displayWeather();
 });
 // when the enter key is pressed
@@ -25,7 +25,7 @@ $('#cityInput').keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
         inputCity = $("#cityInput").val();
-        weatherAPI = `http://api.openweathermap.org/data/2.5/weather?q=${inputCity},us&units=imperial&appid=a14b5cd39920b60f089d913e4253e5f5`;
+        weatherAPI = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity},us&units=imperial&appid=a14b5cd39920b60f089d913e4253e5f5`;
         displayWeather();
     }
 });
